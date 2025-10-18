@@ -1,0 +1,1839 @@
+DEBUG - 2025-10-16 00:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:02:34 --> CSRF token verified.
+DEBUG - 2025-10-16 00:02:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 00:02:34 --> mysqli_sql_exception: Unknown column 'password_confirmation' in 'field list' in C:\xampp\htdocs\taskapp\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\taskapp\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `us...', 0)
+#1 C:\xampp\htdocs\taskapp\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 C:\xampp\htdocs\taskapp\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 C:\xampp\htdocs\taskapp\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 C:\xampp\htdocs\taskapp\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\taskapp\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\taskapp\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\taskapp\app\Controllers\Admin\Users.php(50): CodeIgniter\Model->insert(Object(App\Entities\User))
+#8 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(933): App\Controllers\Admin\Users->create()
+#9 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+#10 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\taskapp\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\taskapp\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\taskapp\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-10-16 00:02:34 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'password_confirmation' in 'field list'
+[Method: POST, Route: admin/users/create]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`name`, `email`, `password_confirmation`, `is_admin`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :password_confirmation:, :is_admin:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Admin\Users.php(50): CodeIgniter\Model->insert(Object(App\Entities\User))
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->create()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-16 00:02:34 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'password_confirmation' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`name`, `email`, `password_confirmation`, `is_admin`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Yet another admin\', \'admin3@example.com\', \'password\', \'1\', \'2025-10-16 00:02:34\', \'2025-10-16 00:02:34\', \'$2y$10$WilbfPc4RJyplf99dvLPGOke5uAG82XzF9sMQ6Dkzb3S9BoFpMSXC\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`name`, `email`, `password_confirmation`, `is_admin`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Yet another admin\', \'admin3@example.com\', \'password\', \'1\', \'2025-10-16 00:02:34\', \'2025-10-16 00:02:34\', \'$2y$10$WilbfPc4RJyplf99dvLPGOke5uAG82XzF9sMQ6Dkzb3S9BoFpMSXC\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`name`, `email`, `password_confirmation`, `is_admin`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :password_confirmation:, :is_admin:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Admin\Users.php(50): CodeIgniter\Model->insert(Object(App\Entities\User))
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->create()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-10-16 00:02:34 --> [Caused by] mysqli_sql_exception: Unknown column 'password_confirmation' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `user` (`name`, `email`, `password_confirmation`, `is_admin`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Yet another admin\', \'admin3@example.com\', \'password\', \'1\', \'2025-10-16 00:02:34\', \'2025-10-16 00:02:34\', \'$2y$10$WilbfPc4RJyplf99dvLPGOke5uAG82XzF9sMQ6Dkzb3S9BoFpMSXC\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `user` (`name`, `email`, `password_confirmation`, `is_admin`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Yet another admin\', \'admin3@example.com\', \'password\', \'1\', \'2025-10-16 00:02:34\', \'2025-10-16 00:02:34\', \'$2y$10$WilbfPc4RJyplf99dvLPGOke5uAG82XzF9sMQ6Dkzb3S9BoFpMSXC\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `user` (`name`, `email`, `password_confirmation`, `is_admin`, `created_at`, `updated_at`, `password_hash`) VALUES (\'Yet another admin\', \'admin3@example.com\', \'password\', \'1\', \'2025-10-16 00:02:34\', \'2025-10-16 00:02:34\', \'$2y$10$WilbfPc4RJyplf99dvLPGOke5uAG82XzF9sMQ6Dkzb3S9BoFpMSXC\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`name`, `email`, `password_confirmation`, `is_admin`, `created_at`, `updated_at`, `password_hash`) VALUES (:name:, :email:, :password_confirmation:, :is_admin:, :created_at:, :updated_at:, :password_hash:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Admin\Users.php(50): CodeIgniter\Model->insert(Object(App\Entities\User))
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->create()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 00:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:05:02 --> CSRF token verified.
+DEBUG - 2025-10-16 00:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:05:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:19:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:19:52 --> CSRF token verified.
+DEBUG - 2025-10-16 00:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:19:53 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 00:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:21:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:21:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:21:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:21:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:22:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:22:13 --> CSRF token verified.
+DEBUG - 2025-10-16 00:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:22:13 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-10-16 00:24:55 --> CSRF token verified.
+DEBUG - 2025-10-16 00:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:24:55 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 00:30:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:30:17 --> CSRF token verified.
+DEBUG - 2025-10-16 00:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:30:17 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 00:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:33:55 --> CSRF token verified.
+DEBUG - 2025-10-16 00:33:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:33:55 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 00:34:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:35:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:35:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:35:09 --> CSRF token verified.
+DEBUG - 2025-10-16 00:35:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:35:09 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 00:49:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:49:16 --> ErrorException: Cannot redeclare App\Models\UserModel::$allowedFields
+[Method: GET, Route: admin/users/edit/28]
+in APPPATH\Models\UserModel.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-10-16 00:49:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:49:18 --> ErrorException: Cannot redeclare App\Models\UserModel::$allowedFields
+[Method: GET, Route: admin/users/show/28]
+in APPPATH\Models\UserModel.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-10-16 00:49:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:49:19 --> ErrorException: Cannot redeclare App\Models\UserModel::$allowedFields
+[Method: GET, Route: admin/users/edit/28]
+in APPPATH\Models\UserModel.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-10-16 00:49:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:49:21 --> ErrorException: Cannot redeclare App\Models\UserModel::$allowedFields
+[Method: GET, Route: admin/users/edit/28]
+in APPPATH\Models\UserModel.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-10-16 00:49:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:49:22 --> ErrorException: Cannot redeclare App\Models\UserModel::$allowedFields
+[Method: GET, Route: admin/users/show/28]
+in APPPATH\Models\UserModel.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-10-16 00:49:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:49:32 --> ErrorException: Cannot redeclare App\Models\UserModel::$allowedFields
+[Method: GET, Route: admin/users]
+in APPPATH\Models\UserModel.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-10-16 00:49:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:49:36 --> ErrorException: Cannot redeclare App\Models\UserModel::$allowedFields
+[Method: GET, Route: admin/users/new]
+in APPPATH\Models\UserModel.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-10-16 00:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:49:41 --> ErrorException: Cannot redeclare App\Models\UserModel::$allowedFields
+[Method: GET, Route: admin/users]
+in APPPATH\Models\UserModel.php on line 11.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+DEBUG - 2025-10-16 00:50:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:50:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:50:13 --> CSRF token verified.
+DEBUG - 2025-10-16 00:50:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:50:13 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-10-16 00:51:32 --> CSRF token verified.
+DEBUG - 2025-10-16 00:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:51:32 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 00:52:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:52:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:52:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:52:45 --> CSRF token verified.
+DEBUG - 2025-10-16 00:52:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:52:45 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 00:53:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:53:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 00:53:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:53:08 --> CSRF token verified.
+DEBUG - 2025-10-16 00:53:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:53:08 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-10-16 00:55:18 --> CSRF token verified.
+DEBUG - 2025-10-16 00:55:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:55:18 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 00:56:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:56:21 --> CSRF token verified.
+DEBUG - 2025-10-16 00:56:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:56:21 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 00:58:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 00:58:36 --> CSRF token verified.
+DEBUG - 2025-10-16 00:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 00:58:36 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 01:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 01:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 01:01:44 --> CSRF token verified.
+DEBUG - 2025-10-16 01:01:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 01:01:44 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 01:02:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 01:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 01:02:21 --> CSRF token verified.
+DEBUG - 2025-10-16 01:02:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 01:02:21 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 01:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 01:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 01:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 01:05:02 --> CSRF token verified.
+DEBUG - 2025-10-16 01:05:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 01:05:03 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 01:10:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 01:10:15 --> CSRF token verified.
+DEBUG - 2025-10-16 01:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 01:10:15 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 01:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 01:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 01:11:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 01:11:10 --> CSRF token verified.
+DEBUG - 2025-10-16 01:11:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 01:11:10 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 09:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:04:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:04:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:05:27 --> CSRF token verified.
+DEBUG - 2025-10-16 09:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:05:38 --> CSRF token verified.
+DEBUG - 2025-10-16 09:05:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 09:05:38 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(96): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 09:15:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:15:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:15:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:15:14 --> CSRF token verified.
+DEBUG - 2025-10-16 09:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:17:34 --> CSRF token verified.
+DEBUG - 2025-10-16 09:17:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:17:38 --> CSRF token verified.
+DEBUG - 2025-10-16 09:17:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:19:33 --> CSRF token verified.
+DEBUG - 2025-10-16 09:19:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:19:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:19:41 --> CSRF token verified.
+DEBUG - 2025-10-16 09:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:19:46 --> CSRF token verified.
+DEBUG - 2025-10-16 09:19:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:21:31 --> CSRF token verified.
+DEBUG - 2025-10-16 09:21:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 09:21:31 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(95): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 09:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:23:12 --> CSRF token verified.
+DEBUG - 2025-10-16 09:23:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:23:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:23:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:23:40 --> CSRF token verified.
+DEBUG - 2025-10-16 09:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 09:23:40 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: admin/users/update/28]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('28', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Admin\Users.php(94): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Admin\Users->update('28')
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Users))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 09:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:28:03 --> CSRF token verified.
+DEBUG - 2025-10-16 09:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:28:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:28:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:28:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:28:13 --> CSRF token verified.
+DEBUG - 2025-10-16 09:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:28:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:28:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:28:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:30:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:30:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:30:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:30:59 --> CSRF token verified.
+DEBUG - 2025-10-16 09:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:31:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:31:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:33:54 --> CSRF token verified.
+DEBUG - 2025-10-16 09:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:34:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:34:04 --> CSRF token verified.
+DEBUG - 2025-10-16 09:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:34:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:34:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:34:18 --> CSRF token verified.
+DEBUG - 2025-10-16 09:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:34:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:34:27 --> CSRF token verified.
+DEBUG - 2025-10-16 09:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:34:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:38:30 --> CSRF token verified.
+DEBUG - 2025-10-16 09:38:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:38:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:38:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:38:37 --> CSRF token verified.
+DEBUG - 2025-10-16 09:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:38:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:38:42 --> CSRF token verified.
+DEBUG - 2025-10-16 09:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:38:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:39:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:39:12 --> CSRF token verified.
+DEBUG - 2025-10-16 09:39:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:39:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:41:11 --> CSRF token verified.
+DEBUG - 2025-10-16 09:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:41:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:42:10 --> CSRF token verified.
+DEBUG - 2025-10-16 09:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:42:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:42:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:43:35 --> CSRF token verified.
+DEBUG - 2025-10-16 09:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:44:18 --> CSRF token verified.
+DEBUG - 2025-10-16 09:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:44:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:47:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:47:32 --> CSRF token verified.
+DEBUG - 2025-10-16 09:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:47:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:47:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:48:04 --> CSRF token verified.
+DEBUG - 2025-10-16 09:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:48:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:48:22 --> CSRF token verified.
+DEBUG - 2025-10-16 09:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:48:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:49:06 --> CSRF token verified.
+DEBUG - 2025-10-16 09:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:49:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:52:18 --> CSRF token verified.
+DEBUG - 2025-10-16 09:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:52:34 --> CSRF token verified.
+DEBUG - 2025-10-16 09:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:57:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:57:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:58:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 09:58:15 --> CSRF token verified.
+DEBUG - 2025-10-16 09:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 09:58:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:02:50 --> CSRF token verified.
+DEBUG - 2025-10-16 10:02:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:02:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:03:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:03:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:03:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:03:47 --> CSRF token verified.
+DEBUG - 2025-10-16 10:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:03:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:03:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:04:00 --> CSRF token verified.
+DEBUG - 2025-10-16 10:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:05:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:05:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:05:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:05:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:05:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:05:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:06:15 --> CSRF token verified.
+DEBUG - 2025-10-16 10:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:06:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:06:56 --> CSRF token verified.
+DEBUG - 2025-10-16 10:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:11:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:11:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:11:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:12:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:12:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:12:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:12:43 --> CSRF token verified.
+DEBUG - 2025-10-16 10:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:12:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:41:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:41:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:42:23 --> CSRF token verified.
+DEBUG - 2025-10-16 10:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:43:35 --> CSRF token verified.
+DEBUG - 2025-10-16 10:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:43:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:43:36 --> CSRF token verified.
+DEBUG - 2025-10-16 10:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:44:02 --> CSRF token verified.
+DEBUG - 2025-10-16 10:44:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:44:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:44:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:44:20 --> CSRF token verified.
+DEBUG - 2025-10-16 10:44:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:44:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:46:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:46:43 --> CSRF token verified.
+DEBUG - 2025-10-16 10:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:47:04 --> CSRF token verified.
+DEBUG - 2025-10-16 10:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:48:09 --> CSRF token verified.
+DEBUG - 2025-10-16 10:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:48:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 10:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 10:50:08 --> CSRF token verified.
+DEBUG - 2025-10-16 10:50:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:28:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 11:28:23 --> CSRF token verified.
+CRITICAL - 2025-10-16 11:28:23 --> ErrorException: Undefined array key "HASH_SECRET_KEY"
+[Method: POST, Route: signup/create]
+in APPPATH\Controllers\Signup.php on line 20.
+ 1 APPPATH\Controllers\Signup.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "HASH_SECRET_KEY"', 'C:\\xampp\\htdocs\\taskapp\\app\\Controllers\\Signup.php', 20)
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Signup->create()
+ 3 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Signup))
+ 4 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 11:37:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 11:38:05 --> CSRF token verified.
+DEBUG - 2025-10-16 11:39:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 11:39:06 --> CSRF token verified.
+DEBUG - 2025-10-16 11:43:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 11:44:37 --> CSRF token verified.
+CRITICAL - 2025-10-16 11:44:37 --> Error: Class "CodeIgniter\Entity" not found
+[Method: POST, Route: signup/create]
+in APPPATH\Entities\User.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(315): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\taskapp\\app\\Entities\\User.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Entities\\User')
+ 4 APPPATH\Controllers\Signup.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Entities\\User')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Signup->create()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Signup))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 11:47:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 11:47:54 --> CSRF token verified.
+DEBUG - 2025-10-16 11:47:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:50:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 11:50:48 --> CSRF token verified.
+DEBUG - 2025-10-16 11:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:50:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:51:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:52:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:52:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 11:52:31 --> CSRF token verified.
+DEBUG - 2025-10-16 11:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 11:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:04:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 12:04:53 --> CSRF token verified.
+DEBUG - 2025-10-16 12:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:04:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:07:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:07:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 12:08:03 --> CSRF token verified.
+DEBUG - 2025-10-16 12:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:08:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 12:09:49 --> CSRF token verified.
+DEBUG - 2025-10-16 12:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:10:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 12:38:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 12:39:32 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for mail.example.com failed: Host desconocido.  in C:\xampp\htdocs\taskapp\system\Email\Email.php:1905
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\xampp\\htdocs...', 1905)
+#1 C:\xampp\htdocs\taskapp\system\Email\Email.php(1905): fsockopen('mail.example.co...', 587, NULL, NULL, 5)
+#2 C:\xampp\htdocs\taskapp\system\Email\Email.php(1818): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\taskapp\system\Email\Email.php(1703): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\taskapp\system\Email\Email.php(1597): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\taskapp\app\Controllers\Home.php(20): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(933): App\Controllers\Home->testEmail()
+#7 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\taskapp\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\taskapp\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\taskapp\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-16 12:39:32 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 12:39:32 --> 
+DEBUG - 2025-10-16 12:41:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 12:42:03 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for mail.example.com failed: Host desconocido.  in C:\xampp\htdocs\taskapp\system\Email\Email.php:1905
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\xampp\\htdocs...', 1905)
+#1 C:\xampp\htdocs\taskapp\system\Email\Email.php(1905): fsockopen('mail.example.co...', 587, NULL, NULL, 5)
+#2 C:\xampp\htdocs\taskapp\system\Email\Email.php(1818): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\taskapp\system\Email\Email.php(1703): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\taskapp\system\Email\Email.php(1597): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\taskapp\app\Controllers\Home.php(20): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(933): App\Controllers\Home->testEmail()
+#7 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\taskapp\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\taskapp\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\taskapp\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-16 12:42:03 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 12:42:03 --> 
+ERROR - 2025-10-16 12:52:38 --> Email: sendWithSmtp throwed ErrorException: fsockopen(): php_network_getaddresses: getaddrinfo for mail.example.com failed: Host desconocido.  in C:\xampp\htdocs\taskapp\system\Email\Email.php:1905
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'fsockopen(): ph...', 'C:\\xampp\\htdocs...', 1905)
+#1 C:\xampp\htdocs\taskapp\system\Email\Email.php(1905): fsockopen('mail.example.co...', 587, NULL, NULL, 5)
+#2 C:\xampp\htdocs\taskapp\system\Email\Email.php(1818): CodeIgniter\Email\Email->SMTPConnect()
+#3 C:\xampp\htdocs\taskapp\system\Email\Email.php(1703): CodeIgniter\Email\Email->sendWithSmtp()
+#4 C:\xampp\htdocs\taskapp\system\Email\Email.php(1597): CodeIgniter\Email\Email->spoolEmail()
+#5 C:\xampp\htdocs\taskapp\app\Controllers\Home.php(20): CodeIgniter\Email\Email->send()
+#6 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(933): App\Controllers\Home->testEmail()
+#7 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\taskapp\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\taskapp\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\taskapp\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#11 C:\xampp\htdocs\taskapp\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#12 {main}
+ERROR - 2025-10-16 12:52:38 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 12:52:38 --> 
+DEBUG - 2025-10-16 13:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 13:43:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 13:47:09 --> CSRF token verified.
+CRITICAL - 2025-10-16 13:47:09 --> Error: Class "CodeIgniter\Entity" not found
+[Method: POST, Route: signup/create]
+in APPPATH\Entities\User.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(315): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\taskapp\\app\\Entities\\User.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Entities\\User')
+ 4 APPPATH\Controllers\Signup.php(14): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Entities\\User')
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Signup->create()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Signup))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-10-16 13:48:16 --> CSRF token verified.
+DEBUG - 2025-10-16 13:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 14:00:13 --> Error: Class "CodeIgniter\Entity" not found
+[Method: GET, Route: signup/activate/e8ff79af3f8e1e2b58091442a9db1595]
+in APPPATH\Entities\User.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(315): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\taskapp\\app\\Entities\\User.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Entities\\User')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Entities\\User')
+ 5 SYSTEMPATH\Database\MySQLi\Result.php(152): is_subclass_of('App\\Entities\\User', 'CodeIgniter\\Entity\\Entity')
+ 6 SYSTEMPATH\Database\BaseResult.php(157): CodeIgniter\Database\MySQLi\Result->fetchObject('App\\Entities\\User')
+ 7 SYSTEMPATH\Database\BaseResult.php(112): CodeIgniter\Database\BaseResult->getCustomResultObject('App\\Entities\\User')
+ 8 SYSTEMPATH\Database\BaseResult.php(395): CodeIgniter\Database\BaseResult->getResult('App\\Entities\\User')
+ 9 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseResult->getFirstRow('App\\Entities\\User')
+10 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+11 APPPATH\Models\UserModel.php(66): CodeIgniter\BaseModel->first()
+12 APPPATH\Controllers\Signup.php(44): App\Models\UserModel->activateByToken('e8ff79af3f8e1e2b58091442a9db1595')
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Signup->activate('e8ff79af3f8e1e2b58091442a9db1595')
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Signup))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 14:01:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:02:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:02:36 --> CSRF token verified.
+DEBUG - 2025-10-16 14:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:02:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:02:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:03:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:08:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:09:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:09:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:09:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:09:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:09:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:09:56 --> CSRF token verified.
+DEBUG - 2025-10-16 14:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:09:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:10:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:12:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:13:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:13:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:15:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:16:40 --> CSRF token verified.
+DEBUG - 2025-10-16 14:16:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:16:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:16:56 --> CSRF token verified.
+DEBUG - 2025-10-16 14:16:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:17:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:17:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:18:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:19:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:19:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:19:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:19:43 --> CSRF token verified.
+DEBUG - 2025-10-16 14:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:19:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:20:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:20:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:21:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:21:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:21:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:22:05 --> CSRF token verified.
+DEBUG - 2025-10-16 14:22:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:22:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:23:35 --> CSRF token verified.
+DEBUG - 2025-10-16 14:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:23:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:23:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:24:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:24:23 --> CSRF token verified.
+DEBUG - 2025-10-16 14:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:24:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:27:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:27:50 --> CSRF token verified.
+DEBUG - 2025-10-16 14:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:27:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:28:18 --> CSRF token verified.
+DEBUG - 2025-10-16 14:28:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:28:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:28:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:28:42 --> CSRF token verified.
+DEBUG - 2025-10-16 14:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:28:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:28:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:29:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 14:29:15 --> CSRF token verified.
+DEBUG - 2025-10-16 14:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 14:29:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:46:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:46:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:46:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 16:46:44 --> CSRF token verified.
+DEBUG - 2025-10-16 16:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:46:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 16:46:54 --> CSRF token verified.
+DEBUG - 2025-10-16 16:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:46:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 16:47:03 --> CSRF token verified.
+DEBUG - 2025-10-16 16:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:47:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:47:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:47:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:58:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:58:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:58:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:58:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 16:58:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 17:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 17:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 17:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 18:28:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 18:32:11 --> CSRF token verified.
+DEBUG - 2025-10-16 18:32:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 18:32:12 --> Error: Class "CodeIgniter\Entity" not found
+[Method: POST, Route: password/processforgot]
+in APPPATH\Entities\User.php on line 7.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(315): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\taskapp\\app\\Entities\\User.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Entities\\User')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Entities\\User')
+ 5 SYSTEMPATH\Database\MySQLi\Result.php(152): is_subclass_of('App\\Entities\\User', 'CodeIgniter\\Entity\\Entity')
+ 6 SYSTEMPATH\Database\BaseResult.php(157): CodeIgniter\Database\MySQLi\Result->fetchObject('App\\Entities\\User')
+ 7 SYSTEMPATH\Database\BaseResult.php(112): CodeIgniter\Database\BaseResult->getCustomResultObject('App\\Entities\\User')
+ 8 SYSTEMPATH\Database\BaseResult.php(395): CodeIgniter\Database\BaseResult->getResult('App\\Entities\\User')
+ 9 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseResult->getFirstRow('App\\Entities\\User')
+10 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+11 APPPATH\Models\UserModel.php(54): CodeIgniter\BaseModel->first()
+12 APPPATH\Controllers\Password.php(16): App\Models\UserModel->findByEmail('doesntexist@example.com')
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->processForgot()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 18:34:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 18:34:02 --> CSRF token verified.
+DEBUG - 2025-10-16 18:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 18:34:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 18:39:39 --> CSRF token verified.
+DEBUG - 2025-10-16 18:39:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 18:39:39 --> Error: Call to undefined method App\Entities\User::startPasswordReset()
+[Method: POST, Route: password/processforgot]
+in APPPATH\Controllers\Password.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->processForgot()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 19:26:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 19:26:11 --> CSRF token verified.
+DEBUG - 2025-10-16 19:26:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 19:26:11 --> Error: Call to undefined method App\Entities\User::startPasswordReset()
+[Method: POST, Route: password/processforgot]
+in APPPATH\Controllers\Password.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->processForgot()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 19:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 19:27:36 --> CSRF token verified.
+DEBUG - 2025-10-16 19:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 19:27:37 --> CodeIgniter\Database\Exceptions\DataException: There is no data to update.
+[Method: POST, Route: password/processforgot]
+in SYSTEMPATH\BaseModel.php on line 1008.
+ 1 SYSTEMPATH\BaseModel.php(1008): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(860): CodeIgniter\BaseModel->update([...], [])
+ 3 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->update('37', Object(App\Entities\User))
+ 4 APPPATH\Controllers\Password.php(22): CodeIgniter\BaseModel->save(Object(App\Entities\User))
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->processForgot()
+ 6 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 7 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-10-16 19:29:23 --> CSRF token verified.
+DEBUG - 2025-10-16 19:29:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 19:37:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 19:37:43 --> CSRF token verified.
+DEBUG - 2025-10-16 19:37:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 19:37:43 --> Error: Class "CodeIgniter\Entity" not found
+[Method: POST, Route: password/processforgot]
+in APPPATH\Entities\User.php on line 7.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(315): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(295): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\taskapp\\app\\Entities\\User.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(271): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Entities\\User')
+ 4 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Entities\\User')
+ 5 SYSTEMPATH\Database\MySQLi\Result.php(152): is_subclass_of('App\\Entities\\User', 'CodeIgniter\\Entity\\Entity')
+ 6 SYSTEMPATH\Database\BaseResult.php(157): CodeIgniter\Database\MySQLi\Result->fetchObject('App\\Entities\\User')
+ 7 SYSTEMPATH\Database\BaseResult.php(112): CodeIgniter\Database\BaseResult->getCustomResultObject('App\\Entities\\User')
+ 8 SYSTEMPATH\Database\BaseResult.php(395): CodeIgniter\Database\BaseResult->getResult('App\\Entities\\User')
+ 9 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseResult->getFirstRow('App\\Entities\\User')
+10 SYSTEMPATH\BaseModel.php(715): CodeIgniter\Model->doFirst()
+11 APPPATH\Models\UserModel.php(60): CodeIgniter\BaseModel->first()
+12 APPPATH\Controllers\Password.php(16): App\Models\UserModel->findByEmail('tasks@samhollingworth.com')
+13 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->processForgot()
+14 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+15 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+16 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+17 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+18 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 19:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 19:39:18 --> CSRF token verified.
+DEBUG - 2025-10-16 19:39:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 19:54:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 19:55:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 19:55:22 --> CSRF token verified.
+DEBUG - 2025-10-16 19:55:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 19:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 21:24:14 --> ArgumentCountError: Too few arguments to function App\Controllers\Password::reset(), 0 passed in C:\xampp\htdocs\taskapp\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: password/reset]
+in APPPATH\Controllers\Password.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->reset()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 21:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:25:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-10-16 21:30:50 --> [DEPRECATED] hash_hmac(): Passing null to parameter #2 ($data) of type string is deprecated in APPPATH\Models\UserModel.php on line 90.
+ 1 APPPATH\Models\UserModel.php(90): hash_hmac('sha256', null, Object(SensitiveParameterValue))
+ 2 APPPATH\Controllers\Password.php(47): App\Models\UserModel->getUserForPasswordReset(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->reset()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 21:30:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:30:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-10-16 21:30:57 --> [DEPRECATED] hash_hmac(): Passing null to parameter #2 ($data) of type string is deprecated in APPPATH\Models\UserModel.php on line 90.
+ 1 APPPATH\Models\UserModel.php(90): hash_hmac('sha256', null, Object(SensitiveParameterValue))
+ 2 APPPATH\Controllers\Password.php(47): App\Models\UserModel->getUserForPasswordReset(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->reset()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 21:30:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-10-16 21:33:50 --> [DEPRECATED] hash_hmac(): Passing null to parameter #2 ($data) of type string is deprecated in APPPATH\Models\UserModel.php on line 90.
+ 1 APPPATH\Models\UserModel.php(90): hash_hmac('sha256', null, Object(SensitiveParameterValue))
+ 2 APPPATH\Controllers\Password.php(47): App\Models\UserModel->getUserForPasswordReset(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->reset()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 21:33:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:36:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-10-16 21:36:04 --> [DEPRECATED] hash_hmac(): Passing null to parameter #2 ($data) of type string is deprecated in APPPATH\Models\UserModel.php on line 90.
+ 1 APPPATH\Models\UserModel.php(90): hash_hmac('sha256', null, Object(SensitiveParameterValue))
+ 2 APPPATH\Controllers\Password.php(47): App\Models\UserModel->getUserForPasswordReset(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->reset()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 21:36:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+WARNING - 2025-10-16 21:42:37 --> [DEPRECATED] hash_hmac(): Passing null to parameter #2 ($data) of type string is deprecated in APPPATH\Models\UserModel.php on line 90.
+ 1 APPPATH\Models\UserModel.php(90): hash_hmac('sha256', null, Object(SensitiveParameterValue))
+ 2 APPPATH\Controllers\Password.php(47): App\Models\UserModel->getUserForPasswordReset(null)
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->reset()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 21:42:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:44:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:44:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:44:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:45:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:45:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:45:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 21:45:31 --> CSRF token verified.
+DEBUG - 2025-10-16 21:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:45:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 21:45:50 --> CSRF token verified.
+DEBUG - 2025-10-16 21:45:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:45:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:46:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:49:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:50:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:50:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:50:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:50:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:50:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 21:50:42 --> CSRF token verified.
+DEBUG - 2025-10-16 21:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:50:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 21:50:51 --> CSRF token verified.
+DEBUG - 2025-10-16 21:50:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 21:50:52 --> CSRF token verified.
+INFO - 2025-10-16 21:50:52 --> CSRF token verified.
+DEBUG - 2025-10-16 21:50:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 21:50:52 --> CSRF token verified.
+INFO - 2025-10-16 21:50:53 --> CSRF token verified.
+INFO - 2025-10-16 21:50:53 --> CSRF token verified.
+INFO - 2025-10-16 21:50:53 --> CSRF token verified.
+ERROR - 2025-10-16 21:50:53 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:50:53 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:50:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:50:55 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:50:55 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:50:56 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:50:56 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:50:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:50:57 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:50:57 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:50:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 21:50:57 --> CSRF token verified.
+INFO - 2025-10-16 21:50:57 --> CSRF token verified.
+INFO - 2025-10-16 21:50:58 --> CSRF token verified.
+INFO - 2025-10-16 21:50:58 --> CSRF token verified.
+INFO - 2025-10-16 21:50:58 --> CSRF token verified.
+INFO - 2025-10-16 21:50:58 --> CSRF token verified.
+INFO - 2025-10-16 21:50:58 --> CSRF token verified.
+ERROR - 2025-10-16 21:50:58 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:50:58 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+INFO - 2025-10-16 21:50:58 --> CSRF token verified.
+DEBUG - 2025-10-16 21:50:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 21:50:58 --> CSRF token verified.
+INFO - 2025-10-16 21:50:59 --> CSRF token verified.
+INFO - 2025-10-16 21:50:59 --> CSRF token verified.
+INFO - 2025-10-16 21:50:59 --> CSRF token verified.
+INFO - 2025-10-16 21:50:59 --> CSRF token verified.
+ERROR - 2025-10-16 21:51:00 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:00 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:51:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:51:01 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:01 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:51:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:51:03 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:03 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:51:05 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:05 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:51:06 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:06 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:51:07 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:07 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:51:08 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:08 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:51:09 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:09 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:51:11 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:11 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:51:12 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:12 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:51:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:51:14 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:14 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-10-16 21:51:16 --> Email: Unable to send email using SMTP. Your server might not be configured to send mail using this method.
+ERROR - 2025-10-16 21:51:16 --> 220 smtp.mailtrap.io ESMTP ready
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250-AUTH PLAIN LOGIN CRAM-MD5
+250 STARTTLS
+
+starttls: 220 2.0.0 Start TLS
+
+hello: 250-smtp.mailtrap.io
+250-SIZE 5242880
+250-PIPELINING
+250-ENHANCEDSTATUSCODES
+250-8BITMIME
+250-DSN
+250 AUTH PLAIN LOGIN CRAM-MD5
+
+from: 250 2.1.0 Ok
+
+to: 250 2.1.0 Ok
+
+data: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+The following SMTP error was encountered: 550 5.7.0 Too many emails per second. Please upgrade your plan https://mailtrap.io/billing/plans/testing
+
+quit: 221 2.0.0 Bye
+
+DEBUG - 2025-10-16 21:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:51:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:52:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:52:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 21:52:48 --> CSRF token verified.
+DEBUG - 2025-10-16 21:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:52:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-10-16 21:53:19 --> CSRF token verified.
+DEBUG - 2025-10-16 21:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:53:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 21:53:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 23:50:03 --> CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+[Method: POST, Route: password/processreset/cc129619e15ab97ee380573e9e064f9e]
+in SYSTEMPATH\Security\Security.php on line 262.
+ 1 SYSTEMPATH\Security\Security.php(262): CodeIgniter\Security\Exceptions\SecurityException::forDisallowedAction()
+ 2 SYSTEMPATH\Filters\CSRF.php(52): CodeIgniter\Security\Security->verify(Object(CodeIgniter\HTTP\IncomingRequest))
+ 3 SYSTEMPATH\Filters\Filters.php(241): CodeIgniter\Filters\CSRF->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\Filters\Filters.php(221): CodeIgniter\Filters\Filters->runBefore([...])
+ 5 SYSTEMPATH\CodeIgniter.php(479): CodeIgniter\Filters\Filters->run('password/processreset/cc129619e15ab97ee380573e9e064f9e', 'before')
+ 6 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 23:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 23:55:27 --> ArgumentCountError: Too few arguments to function App\Controllers\Password::reset(), 0 passed in C:\xampp\htdocs\taskapp\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: password/reset]
+in APPPATH\Controllers\Password.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->reset()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 23:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 23:55:30 --> ArgumentCountError: Too few arguments to function App\Controllers\Password::reset(), 0 passed in C:\xampp\htdocs\taskapp\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: password/reset]
+in APPPATH\Controllers\Password.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->reset()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 23:55:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 23:55:32 --> ArgumentCountError: Too few arguments to function App\Controllers\Password::reset(), 0 passed in C:\xampp\htdocs\taskapp\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: password/reset]
+in APPPATH\Controllers\Password.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->reset()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 23:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-10-16 23:55:34 --> ArgumentCountError: Too few arguments to function App\Controllers\Password::reset(), 0 passed in C:\xampp\htdocs\taskapp\system\CodeIgniter.php on line 933 and exactly 1 expected
+[Method: GET, Route: password/reset]
+in APPPATH\Controllers\Password.php on line 41.
+ 1 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Password->reset()
+ 2 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Password))
+ 3 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-10-16 23:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:58:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:58:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:58:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:58:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:58:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:58:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:58:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:58:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:59:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:59:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:59:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:59:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:59:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-10-16 23:59:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

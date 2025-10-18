@@ -1,0 +1,1 @@
+__ci_last_regenerate|i:1760142233;_ci_previous_url|s:31:"http://taskapp.localhost/signup";errors|a:3:{s:5:"email";s:34:"Please enter a valid email address";s:8:"password";s:31:"The password field is required.";s:21:"password_confirmation";s:27:"Please confirm the password";}__ci_vars|a:2:{s:6:"errors";s:3:"old";s:7:"warning";s:3:"old";}warning|s:12:"Invalid data";
